@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Contacts</title>
+    <link rel="icon" type="image/png" href="assets/img/capa1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style-contacts.css">
+    <link rel="stylesheet" href="style/templates.css">
+    <link rel="stylesheet" type="text/css" href="style/add_task.css">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/preloader.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="js/mini_backend.js"></script>
+    <script src="js/script-contacts.js"></script>
+    <script src="js/addTask_categories.js"></script>
+    <script src="js/addTask_contacts.js"></script>
+    <script src="js/add_Task.js"></script>
+    <script src="js/includeHTML.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+
+<body onload="init()">
+    <div id="preloader"></div>
+   
+
+    <div id="contactsWrapper" class="contacts-wrapper">
+        <nav w3-include-html="assets/templates/desktop_template.html">
+
+        </nav>
+        <div class="contacts-wrapper-inner">
+            <div class="desktop-topBar-content-container" w3-include-html="assets/templates/desktop-topBar-template.html">
+
+            </div>
+            <div class="contacts-wrapper-inner-content" onclick="hideLogOut()">
+                <div id="contacts_list" class="contacts-list">
+
+                </div>
+                <div id="contacts_overview" class="contacts-overview">
+                    <div class="contacts-overview-headline">
+                        <h1>CONTACTS</h1>
+                        <hr>
+                        <span>Better with a team</span>
+                    </div>
+                    <div id="contacts_overview_container" class="contacts-overview-container d-none">
+                        <div class="overview-headline-container">
+                            <div id="contacts_overview_contact_pictureContainer" class="contacts-overview-contact-pictureContainer">
+                                <span id="contacts_overview_contact_picture" class="contacts-overview-contact-picture">
+                                    
+                                </span>
+                            </div>
+                            <div>
+                                <h3 id="overview_contact_name" class="contacts-list-contact-keys-name"></h3>
+                                <div class="contacts-list-contact-keys-email" onclick="displayAddTask()"><span>&plus;</span> Add Tasks</div>
+                            </div>
+                        </div>
+                        <div class="overview-body-container">
+                            <div class="overview-body-contactInformation">
+                                <span>Contact Information</span>
+                                <div id="overview_body_editContact_container" class="overview-body-editContact-container" onclick="displayEditContact()">
+                                    <img class="overview_body_editContact_container_img" id="overview_body_editContact_container_img" src="./assets/img/pencil.png" alt="">
+                                </div>
+                                <img class="trashCan" id="trashCan"  src="./assets/img/deleteTrash.png" onclick="deleteContact()">
+                            </div>
+                            <div class="overview-body-bonusInformation">
+                                <div>
+                                    <b><span>E-Mail</span></b>
+                                    <a id="overview_contact_email" class="contacts-list-contact-keys-email"
+                                        href="">anton.mayer@gmail.com</a>
+                                </div>
+                                <div>
+                                    <b><span>Phone</span></b>
+                                    <span id="overview_contact_phone">+49 222222 2222</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img id="showMobileContactListArrow" class="showMobileContactListArrow d-none" src="././assets/img/arrow-left-signup.png" onclick="showContactListMobile()">
+                </div>
+                <button id="addContact_button" class="addContact-button" onclick="displayAddContact()">
+                    <span>New Contact</span>
+                    <img src="././assets/img/addUser_white.png">
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div id="contactAddPopUp-container" class="contactPopUp-container hideAddContact" w3-include-html="assets/templates/desktop_addContact_template.html">
+    </div>
+    <div id="contactEditPopUp-container" class="contactPopUp-container hideEditContact" w3-include-html="assets/templates/desktop_editContact_template.html">
+    </div>
+    <div id="addTaskPopUp-container" class="addTaskPopUp-container hideAddTask" w3-include-html="assets/templates/desktop_addTask.html">
+    </div>
+</body>
+
+</html>

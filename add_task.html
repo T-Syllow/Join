@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Task</title>
+    <link rel="icon" type="image/png" href="assets/img/capa1.png">
+    <link rel="stylesheet" type="text/css" href="style/add_task.css">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/templates.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style/preloader.css">
+    <script src="js/mini_backend.js"></script>
+    <script src="js/addTask_categories.js"></script>
+    <script src="js/addTask_contacts.js"></script>
+    <script src="js/add_Task.js"></script>
+    <script src="js/includeHTML.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+
+
+<body onload="initTask(), loadAllTasks()">
+
+    <div id="preloader"></div>
+
+    <nav w3-include-html="assets/templates/desktop_template.html"></nav>
+    <main class="mainContent">
+        <div>
+            <div class="desktop-topBar-content-container"
+                w3-include-html="assets/templates/desktop-topBar-template.html"></div>
+        </div>
+
+
+
+        <form onsubmit="addTaskToBoard(); return false;" onclick="hideLogOut()">
+            <div class="headline">
+                <h1>Add Task</h1>
+            </div>
+            <div class="flexContainer">
+                <div class="leftContainer">
+
+                    <div class="inputBlock">
+                        <span class="inputTitle">Title</span>
+                        <input id="title" placeholder="Enter a title" onkeyup="addTitle()" required>
+                    </div>
+
+                    <div class="inputBlock">
+                        <span class="inputTitle">Description</span>
+                        <textarea id="description" class="add_task_textarea" placeholder="Enter a Description"
+                            onkeyup="addDescription()" required></textarea>
+                    </div>
+
+                    <div class="inputBlock">
+
+                        <!-- Category Start -->
+                        <span class="inputTitle">Category</span>
+                        <div class="selectField" id="selectField" onclick="openCloseCategories()">
+                            <div class="selectCategory" id="selectCategory">
+                                <div class="center">
+                                    <div id="categoryColor"></div>
+                                    <input id="category" class="no-outline" maxlength="16"
+                                        placeholder="Select a category" required>
+                                </div>
+                                <div id="categoryImage">
+                                    <img src="assets/img/dropdown_arrow.png">
+                                </div>
+                            </div>
+                            <div class="d-none" id="openedCategories" onclick="notOpenCloseCategories(event)">
+                                <div class="oneCategory" onclick="addNewCategory()">New category</div>
+                                <div class="oneCategory" onclick="addCategory(0)">
+                                    <div class="center">
+                                        <div id="imageCat0" class="imageCat"><img src="assets/img/circle_pink.png">
+                                        </div>
+                                        <div id="category0">Sales</div>
+                                    </div>
+                                </div>
+                                <div class="oneCategory" onclick="addCategory(1)">
+                                    <div class="center">
+                                        <div id="imageCat1" class="imageCat"><img src="assets/img/circle_blue.png">
+                                        </div>
+                                        <div id="category1">Development</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="categoryColors" class="d-none">
+                            <div onclick="changeColor(0)" id="changeColor0" class="color">
+                                <img src="assets/img/circle_pink.png">
+                            </div>
+                            <div onclick="changeColor(1)" id="changeColor1" class="color">
+                                <img src="assets/img/circle_turquoise.png">
+                            </div>
+                            <div onclick="changeColor(2)" id="changeColor2" class="color">
+                                <img src="assets/img/circle_darkblue.png">
+                            </div>
+                            <div onclick="changeColor(3)" id="changeColor3" class="color">
+                                <img src="assets/img/circle_orange.png">
+                            </div>
+                            <div onclick="changeColor(4)" id="changeColor4" class="color">
+                                <img src="assets/img/circle_green.png">
+                            </div>
+                            <div onclick="changeColor(5)" id="changeColor5" class="color">
+                                <img src="assets/img/circle_red.png">
+                            </div>
+                            <div onclick="changeColor(6)" id="changeColor6" class="color">
+                                <img src="assets/img/circle_blue.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Categroy End -->
+                    <!-- Assigned To Start -->
+                    <div class="inputBlock">
+                        <span class="inputTitle">Assigned to</span>
+                        <div class="selectField" id="selectFieldContact" onclick="openCloseContacts()">
+                            <div class="selectContact" id="selectContact">
+                                <input id="contact" placeholder="Select contacts to assign" />
+                                <div id="imageContact">
+                                    <img src="assets/img/dropdown_arrow.png" />
+                                </div>
+                            </div>
+                            <div class="d-none" id="openedContacts" onclick="notOpenCloseContacts(event)">
+                            </div>
+                        </div>
+                        <div id="addedContacts"></div>
+                    </div>
+                    <!-- Assigned To End -->
+                </div>
+                <div class="line"></div>
+                <div class="rightContainer">
+                    <div class="inputBlock">
+                        <span class="inputTitle">Due date</span>
+                        <input type="date" required id="date" onchange="updateMin()" onkeyup="addDate()">
+                    </div>
+                    <div class="inputBlock">
+                        <span class="inputTitle">Prio</span>
+                        <div class="prio">
+                            <div id="urgentBtn" class="prioBtn" onclick="choosePriority('Urgent')">
+                                Urgent
+                                <img src="assets/img/prio_Urgent1.png">
+                            </div>
+                            <div id="mediumBtn" class="prioBtn" onclick="choosePriority('Medium')">
+                                Medium
+                                <img src="assets/img/prio_Medium1.png">
+                            </div>
+                            <div id="lowBtn" class="prioBtn" onclick="choosePriority('Low')">
+                                Low
+                                <img src="assets/img/prio_Low1.png">
+                            </div>
+                        </div>
+                        <span id="priorityAlertPage" class="priorityAlert d-none">Choose a priority!</span>
+                    </div>
+                    <!-- Subtask Start -->
+                    <div class="inputBlock">
+                        <span class="inputTitle">Subtasks</span>
+                        <div class="subtask">
+                            <input id="newSubtaskInput" type="text" placeholder="Add new subtask">
+                            <div class="subtaskBtn">
+                                <img src="assets/img/addSubtask_plus.png" onclick="addNewSubtask()">
+                            </div>
+                        </div>
+                        <div id="newSubtasks"></div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="buttons-container">
+                <div class="buttons-createTask">
+                    <div>
+                        <button class="clearBtn" onclick="clearValues()">
+                            <img src="assets/img/cancel_default.png" class="default_cancel">
+                            <img src="assets/img/cancel_hover.png" class="hover_cancel">
+                            <img src="assets/img/cancel_click.png" class="click_cancel">
+                        </button>
+                    </div>
+                    <div>
+                        <button class="createBtn">
+                            <img src="assets/img/createTask_default.png" class="default_create">
+                            <img src="assets/img/createTask_hover.png" class="hover_create">
+                            <img src="assets/img/creatTask_click.png" class="click_create">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="createTaskBtn" class="d-none">
+                <img id="image" src="assets/img/task_added_to_board.png" alt="Bild">
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

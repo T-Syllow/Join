@@ -1,0 +1,646 @@
+body {
+    margin: 0px;
+}
+
+.fontBold {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.sidebar {
+    background-color: #2A3647;
+    height: 1024px;
+    width: 232px;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 89px;
+}
+
+.headerHeadline {
+    margin-left: 116px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.iconsHeader {
+    margin-right: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.profilIcon {
+    margin-left: 26px;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content--container {
+    background-color: #F5F5F5;
+    height: 100%;
+    margin-top: -70px;
+}
+
+.headline {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.board {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 22px;
+    margin-top: 22px;
+    margin-left: 3%;
+}
+
+.tasklist-container {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    flex-wrap: wrap;
+}
+
+.searchAddTask {
+    display: flex;
+    margin-right: 65px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    width: 251px;
+    height: 51px;
+    background-color: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+}
+
+.inputSearch {
+    height: 40px;
+    border: none;
+    width: 190px;
+    margin-left: 10px;
+    padding-left: 8px;
+    outline: none;
+}
+
+.lineBoard {
+    border-style: groove;
+    border-right: 1px solid #D1D1D1;
+    border-bottom: none;
+    border-top: none;
+    height: 31px;
+}
+
+.lensContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 47px;
+}
+
+.lensImg {
+    width: 27px;
+    height: 31px;
+    cursor: pointer;
+}
+
+.addTaskContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2A3647;
+    width: 137px;
+    height: 51px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+.addTaskContainer:hover {
+    background-color: #2AABE2;
+}
+
+.addTaskIcon {
+    margin-left: 10px;
+}
+
+.dragAreaHighlight {
+    background-color: #a5a3a3;
+}
+
+.area {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    transition: 525ms;
+    padding: 10px;
+}
+
+.todoContainer,
+.progressContainer,
+.feedbackContainer,
+.doneContainer {
+    width: 20%;
+    margin-left: 3%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+.todoContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.progressContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.feedbackContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.doneContainer::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.todoContainer,
+.progressContainer,
+.feedbackContainer,
+.doneContainer {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.contactsPrioContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactsPictureContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.boardInitialsShortName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 80px;
+    min-height: 36px;
+    min-width: 36px;
+    color: white;
+}
+
+.prioImage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 80px;
+    min-height: 48px;
+    min-width: 48px;
+    margin-right: 30px;
+    color: white;
+}
+
+.boardInitialsInitials {
+    min-height: 23px;
+}
+
+.areaTodoDrag,
+.areaProgressDrag,
+.areaFeedbackDrag,
+.areaDoneDrag {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.areaChild {
+    display: flex;
+    justify-content: space-between;
+    width: 342px;
+}
+
+.addTaskSvg {
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.addTaskSvg :hover rect {
+    stroke: #2AABE2;
+    color: #2AABE2;
+    fill: #2AABE2;
+
+}
+
+.taskContainer {
+    width: 80%;
+    height: fit-content;
+    background-color: #FFFFFF;
+    padding: 16px;
+    margin-right: 26px;
+    margin-bottom: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+.titleContainer {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.categoryContainer {
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+    width: fit-content;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.descriptionContainer {
+    height: fit-content;
+    color: #A8A8A8;
+    word-break: break-word;
+    margin-bottom: 8px;
+
+}
+
+.subTaskContainer {
+    display: flex;
+}
+
+.subtaskCheckedCount {
+    margin-left: 20px;
+}
+
+.progressBarContainer {
+    height: 16px;
+    background-color: #F4F4F4;
+    min-width: 60%;
+    border-radius: 6px;
+}
+
+.progressBar {
+    height: 16px;
+    background-color: #29ABE2;
+    width: 0%;
+    border-radius: 6px;
+}
+
+
+.subTasksCountContainer {
+    margin-left: 20px;
+}
+
+.doneHeadlineContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedbackHeadlineContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progressHeadlineContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todoHeadlineContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.svg {
+    cursor: pointer;
+}
+
+.pathA {
+    stroke: #2AABE2;
+}
+
+.pathB {
+    stroke: #2AABE2;
+}
+
+.rect {
+    stroke: #2AABE2;
+}
+
+@media (max-width: 1028px) {
+
+    .tasklist-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        background-color: #F5F5F5;
+    }
+
+    .main-content--container {
+        margin-top: 50px;
+    }
+
+    .todo-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .todoHeadlineContainer {
+        align-self: center;
+        width: 100%;
+    }
+
+    .todoContainer,
+    .progressContainer,
+    .feedbackContainer,
+    .doneContainer {
+        width: 80%;
+        min-height: 150px;
+        margin-left: 0%;
+        margin-bottom: 40px;
+    }
+
+
+    .headline {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .board {
+        width: 80%;
+        margin-left: 0%;
+        margin-top: -100px;
+    }
+
+    .searchAddTask {
+        width: 80%;
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+
+    .addTaskContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2A3647;
+        height: 51px;
+        color: white;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+
+
+    .area {
+        width: 100%;
+        transition: 525ms;
+        padding: 10px;
+    }
+
+    .addTaskIcon {
+        margin-left: 1px;
+        padding: 16px;
+    }
+
+    .searchBar {
+        display: flex;
+        align-items: center;
+        width: 190px;
+        height: 51px;
+        background-color: #FFFFFF;
+        border: 1px solid #D1D1D1;
+        border-radius: 10px;
+
+    }
+
+    .inputSearch {
+        height: 40px;
+        border: none;
+        width: 122px;
+        margin-left: 10px;
+        padding-left: 8px;
+        outline: none;
+    }
+
+    @media (max-width: 600px) {
+        .addTaskContainer p {
+            font-size: 0;
+        }
+    }
+}
+
+/* Add Task Overview Pop Up */
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    backdrop-filter: blur(2px);
+    z-index: 99;
+    cursor: pointer;
+}
+
+.TaskCard {
+    height: 800px;
+    width: 600px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerContentBoxOverlay {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    cursor: default;
+    overflow: auto;
+}
+
+.overlayCategory {
+    padding: 5px 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    border-radius: 10px;
+}
+
+.overlayTitle {
+    font-weight: 700;
+    font-size: 50px;
+
+}
+
+.overlayTitle h5 {
+    margin: 0;
+    color: #2A3647;
+    font-size: 61px;
+}
+
+.overlayDiscription {
+    font-weight: 400;
+    font-size: 21px;
+
+}
+
+.overlayDate {
+    display: flex;
+    gap: 25px;
+}
+
+.overlayPrio {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.overlayCardPrio {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 10px;
+    gap: 10px;
+    color: white;
+}
+
+.overlayInitialArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.overlayInitials {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.overlaySubtasks {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.overlaySubtasks h5 {
+    margin: 0;
+}
+
+.overlayTaskClose {
+    position: absolute;
+    z-index: 100;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.overlayTaskEdit {
+    position: absolute;
+    z-index: 100;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+} 
+
+.deleteButton {
+    position: absolute;
+    z-index: 101;
+    bottom: 11px;
+    right: 61px;
+    cursor: pointer;
+    height: 55px;
+}
+
+.overlayTaskShortName {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-board-task {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    backdrop-filter: blur(2px);
+    z-index: 99;
+}
+
+.singleSubTask {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.Low {
+    background-color: #7AE229;
+}
+
+.Medium {
+    background-color: #FFA800;
+}
+
+.Urgent {
+    background-color: #FF3D00;
+}

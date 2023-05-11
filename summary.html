@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/img/capa1.png">
+    <link rel="stylesheet" href="style/summaryStyle.css">
+    <link rel="stylesheet" href="style/add_task.css">
+    <link rel="stylesheet" href="style/templates.css">
+    <link rel="stylesheet" href="style/preloader.css">
+    <script src="js/mini_backend.js"></script>
+    <script src="js/summary.js"></script>
+    <script src="js/add_Task.js"></script>
+    <script src="js/includeHTML.js"></script>
+    
+    <!--<script src="js/login.js"></script>-->
+    <script src="js/logout.js"></script>
+
+
+
+    <title>Summary</title>
+</head>
+
+<body onload="init()">
+    <div id="preloader"></div>
+
+
+    <div class="content" id="content_template">
+        <nav w3-include-html="assets/templates/desktop_template.html"></nav>
+        <div class="content-summary">
+            <div class="desktop-topBar-content-container"
+                w3-include-html="assets/templates/desktop-topBar-template.html">
+
+            </div>
+            <main class="main" onclick="hideLogOut()">
+                <div class="main-inner">
+                    <div class="headline">
+                        <div class="summary">
+                            <h1><b>Summary</b></h1>
+                        </div>
+                        <div class="lineSummary"></div>
+                        <div class="nutshell">Everything in a nutshell!</div>
+                    </div>
+                    <div class="contentChild">
+                        <div class="containerOverview">
+                            <div class="tasks">
+                                <a class="link" id="link6" onmouseover="mouseOverSmall(6)" onmouseout="mouseOutSmall(6)"
+                                    href="board.html">
+                                    <div id="todo6" class="taskBoard">
+                                        <div id="boardCount" class="taskBoardNumber"></div>
+                                        <div class="taskBoardText">Task in Board</div>
+                                    </div>
+                                </a>
+                                <a class="link" id="link5" onmouseover="mouseOverSmall(5)" onmouseout="mouseOutSmall(5)"
+                                    href="board.html">
+                                    <div id="todo5" class="taskProgress">
+                                        <div id="progressCount" class="taskProgressNumber"></div>
+                                        <div class="taskProgressText">Task in Progress</div>
+                                    </div>
+                                </a>
+                                <a class="link" id="link4" onmouseover="mouseOverSmall(4)" onmouseout="mouseOutSmall(4)"
+                                    href="board.html">
+                                    <div id="todo4" class="taskFeedback">
+                                        <div id="feedbackCount" class="taskFeedbackNumber"></div>
+                                        <div class="taskFeedbackText">Awaiting Feedback</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="link todoAndDoneLink" id="link1" onmouseover="mouseOverSmall(3)"
+                                onmouseout="mouseOutSmall(3)" href="board.html">
+                                <div id="todo3" class="urgentContainer">
+                                    <div class="urgentChildContainer">
+                                        <div class="urgentIconContainer"><img class="urgentIcon"
+                                                src="assets/img/redDouble.png" alt=""></div>
+                                        <div class="urgentSmallContainer">
+                                            <div id="urgentCount" class="urgentNumber"></div>
+                                            <div class="urgentText">Urgent</div>
+                                        </div>
+                                    </div>
+                                    <div class="lineUrgent"></div>
+                                    <div class="dateContainer">
+                                        <div id="currentDate" class="date"></div>
+                                        <div class="deadline">Upcoming Deadline</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="todoContainer">
+                                <a class="link todoAndDoneLink" id="link1" onmouseover="mouseOverTodo(1)"
+                                    onmouseout="mouseOutTodo(1)" href="board.html">
+                                    <div id="todo1" class="todo">
+                                        <div class="todoChildContainer">
+                                            <div class="todoIconContainer"><svg class="todoIcon" width="70" height="70"
+                                                    viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle id="circle1" class="circleTodo" cx="35.25" cy="35" r="34.5"
+                                                        fill="#2A3647" />
+                                                    <path id="pathBig1"
+                                                        d="M31.6156 47.262L26.0508 43.8847L40.211 20.553C40.7841 19.6087 42.0141 19.3078 42.9584 19.8809L45.1037 21.1829C46.0479 21.756 46.3488 22.986 45.7758 23.9303L31.6156 47.262Z"
+                                                        fill="white" />
+                                                    <path id="pathSmall1"
+                                                        d="M30.94 48.3749L25.3752 44.9976L26.2314 48.4972C26.3626 49.0337 26.9039 49.3622 27.4403 49.231L30.94 48.3749Z"
+                                                        fill="white" />
+                                                </svg></div>
+                                            <div class="todoNumberText">
+                                                <div id="todoCount" class="todoNumber"></div>
+                                                <div class="todoText">To-do</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="link todoAndDoneLink" id="link2" onmouseover="mouseOverDone(2)"
+                                    onmouseout="mouseOutDone(2)" href="board.html">
+                                    <div id="todo2" class="done">
+                                        <div class="doneChildContainer">
+                                            <div class="doneIconContainer"><svg class="doneIcon" viewBox="0 0 70 70"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle id="circle2" cx="35.25" cy="35" r="34.5" fill="#2A3647" />
+                                                    <path id="pathBig2"
+                                                        d="M20.2783 35.0001L31.5071 46.0662L50.2217 23.9341"
+                                                        stroke="white" stroke-width="7" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg></div>
+
+                                            <div class="doneNumberText">
+                                                <div id="doneCount" class="doneNumber"></div>
+                                                <div class="doneText">Done</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="userNameContainer">
+                            <div>
+                                <span class="greetingTime" id="greetTime"></span>
+                                <span class="nameOfUserGreeting" id="nameUser" class="userName"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

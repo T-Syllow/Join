@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('../assets/fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  body {
+    height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0px;
+    display: flex;
+    font-family: 'Inter Bold', sans-serif;
+    overflow: hidden;
+  }
+
+  .help-content {
+    overflow-y: scroll;
+  }
+  
+  .help-content--inner {
+    margin: 30px;
+    font-family: 'Inter Bold', sans-serif;
+    overflow-x: wrap;
+  }
+
+  
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #AAA;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}

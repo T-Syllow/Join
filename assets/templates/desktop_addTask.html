@@ -1,0 +1,134 @@
+<div class="mainContainer">
+    <form id="popupAddTask" class="contPopupAddTask" onsubmit="addTask(), loadTask(), hideAddTask(); return false;">
+        <div class="popupAddTaskHeader">
+            <h1>Add Task</h1>
+            <div onclick="hidePopupAddTask()"><img src="././assets/img/cross.png" alt=""></div>
+        </div>
+        <div class="flexContainer">
+            <div class="leftContainer">
+
+                <div class="inputBlock">
+                    <span class="inputTitle">Title</span>
+                    <input id="title" placeholder="Enter a title" onkeyup="addTitle()" required>
+                </div>
+
+                <div class="inputBlock">
+                    <span class="inputTitle">Description</span>
+                    <textarea id="description" class="add_task_textarea" placeholder="Enter a Description" onkeyup="addDescription()" required></textarea>
+                </div>
+
+                <div class="inputBlock">
+
+                    <!-- Category Start -->
+                    <span class="inputTitle">Category</span>
+                    <div class="selectField" id="selectField" onclick="openCloseCategories()">
+                        <div class="selectCategory" id="selectCategory">
+                            <div class="center">
+                                <div id="categoryColor"></div>
+                                <input id="category" class="no-outline" maxlength="16" placeholder="Select a category" required>
+                            </div>
+                            <div id="categoryImage">
+                                <img src="assets/img/dropdown_arrow.png">
+                            </div>
+                        </div>
+                        <div class="d-none" id="openedCategories" onclick="notOpenCloseCategories(event)">
+                            
+                        </div>
+                    </div>
+                    <div id="categoryColors" class="d-none">
+                        <div onclick="changeColor(0)" id="changeColor0" class="color">
+                            <img src="assets/img/circle_pink.png">
+                        </div>
+                        <div onclick="changeColor(1)" id="changeColor1" class="color">
+                            <img src="assets/img/circle_turquoise.png">
+                        </div>
+                        <div onclick="changeColor(2)" id="changeColor2" class="color">
+                            <img src="assets/img/circle_darkblue.png">
+                        </div>
+                        <div onclick="changeColor(3)" id="changeColor3" class="color">
+                            <img src="assets/img/circle_orange.png">
+                        </div>
+                        <div onclick="changeColor(4)" id="changeColor4" class="color">
+                            <img src="assets/img/circle_green.png">
+                        </div>
+                        <div onclick="changeColor(5)" id="changeColor5" class="color">
+                            <img src="assets/img/circle_red.png">
+                        </div>
+                        <div onclick="changeColor(6)" id="changeColor6" class="color">
+                            <img src="assets/img/circle_blue.png">
+                        </div>
+                    </div>
+                </div>
+                <!-- Categroy End -->
+                <!-- Assigned To Start -->
+                <div class="inputBlock">
+                    <span class="inputTitle">Assigned to</span>
+                    <div class="selectField" id="selectFieldContact" onclick="openCloseContacts()">
+                        <div class="selectContact" id="selectContact">
+                            <input id="contact"  placeholder="Select contacts to assign"/>
+                            <div id="imageContact">
+                                <img src="assets/img/dropdown_arrow.png"/>
+                            </div>
+                        </div>
+                        <div class="d-none" id="openedContacts" onclick="notOpenCloseContacts(event)">
+                        </div>
+                    </div>
+                        <div id="addedContacts"></div>
+                </div>
+                <!-- Assigned To End -->
+            </div>
+            <div class="line"></div>
+            <div class="rightContainer">
+                <div class="inputBlock">
+                    <span class="inputTitle">Due date</span>
+                    <input type="date" required id="date" onkeyup="addDate()">
+                </div> 
+                <div class="inputBlock">
+                    <span class="inputTitle">Prio</span>
+                    <div class="prio">
+                        <div id="urgentBtn" class="prioBtn" onclick="choosePriority('Urgent')">
+                            Urgent
+                            <img src="assets/img/prio_Urgent1.png">
+                        </div>
+                        <div id="mediumBtn" class="prioBtn" onclick="choosePriority('Medium')">
+                            Medium
+                            <img src="assets/img/prio_Medium1.png">
+                        </div>
+                        <div id="lowBtn" class="prioBtn" onclick="choosePriority('Low')">
+                            Low
+                            <img src="assets/img/prio_Low1.png">
+                        </div>
+                    </div>
+                    <span id="priorityAlertTemplate" class="priorityAlert d-none">Choose a priority!</span>
+                </div>
+                <!-- Subtask Start -->
+                <div class="inputBlock">
+                    <span class="inputTitle">Subtasks</span>
+                        <div class="subtask">
+                            <input id="newSubtaskInput" type="text" placeholder="Add new subtask">
+                            <div class="subtaskBtn">
+                                <img src="assets/img/addSubtask_plus.png" onclick="addNewSubtask()">
+                            </div>
+                        </div>
+                        <div id="newSubtasks"></div>
+                </div>
+
+                <div class="buttons-createTask">
+                        <button class="clearBtn" onclick="clearValues()">
+                            <img src="assets/img/cancel_default.png" class="default_cancel">
+                            <img src="assets/img/cancel_hover.png" class="hover_cancel">
+                            <img src="assets/img/cancel_click.png" class="click_cancel">                                    
+                        </button>
+                        <button class="createBtn">
+                            <img src="assets/img/createTask_default.png" class="default_create">
+                            <img src="assets/img/createTask_hover.png" class="hover_create">
+                            <img src="assets/img/creatTask_click.png" class="click_create">
+                        </button>
+                </div>
+            </div>
+        </div>
+        <div id="createTaskBtn" class="d-none">
+            <img id="image" src="assets/img/task_added_to_board.png" alt="Bild">
+        </div>
+    </form>
+</div>

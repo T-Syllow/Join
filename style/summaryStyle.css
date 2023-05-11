@@ -1,0 +1,627 @@
+body {
+    margin: 0px;
+}
+
+.sidebar {
+    background-color: #2A3647;
+    height: 1024px;
+    width: 232px;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+    width: 30%;
+}
+
+.link :hover {
+    transform: scale(1.05);
+    transition: 425ms;
+    background-color: #2A3647 !important;
+}
+
+.todoAndDoneLink {
+    width: 45% !important;
+}
+
+.linkBackground {
+    background-color: #2A3647 !important;
+}
+
+.textHover {
+    color: white;
+}
+
+
+
+.circle {
+    fill: #FFFFFF;
+}
+
+.path {
+    fill: #2A3647;
+}
+
+.stroke {
+    stroke: #2A3647;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 89px;
+}
+
+.headerHeadline {
+    margin-left: 116px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+
+.iconsHeader {
+    margin-right: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.profilIcon {
+    margin-left: 26px;
+}
+
+
+.main {
+    background-color: #F5F5F5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 91vh;
+}
+
+.main-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.lineSummary {
+    border-style: groove;
+    border-right-color: rgb(39, 169, 224);
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nutshell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.contentChild {
+    display: flex;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.containerOverview {
+    margin-left: 100px;
+    width: 50%;
+}
+
+
+.tasks {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.taskBoard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.taskBoardNumber {
+    font-weight: 600;
+    font-size: 3rem;
+    pointer-events: none;
+}
+
+.taskBoardText {
+    pointer-events: none;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.taskProgress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.taskProgressNumber {
+    font-weight: 600;
+    font-size: 3rem;
+    pointer-events: none;
+}
+
+.taskProgressText {
+    pointer-events: none;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.taskFeedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.taskFeedbackNumber {
+    font-weight: 600;
+    font-size: 3rem;
+    pointer-events: none;
+
+}
+
+.taskFeedbackText {
+    pointer-events: none;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.urgentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    margin-bottom: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+.urgentIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.urgentIconContainer img {
+    height: 60px;
+    width: 60px;
+}
+
+.urgentChildContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 129px;
+    pointer-events: none;
+}
+
+.urgentSmallContainer {
+    pointer-events: none;
+}
+
+.urgentNumber {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.urgentText {
+    pointer-events: none;
+}
+
+.lineUrgent {
+    border-style: groove;
+    border-right-color: #D1D1D1;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    height: 100px;
+}
+
+.dateContainer {
+    pointer-events: none;
+}
+
+.date {
+    pointer-events: none;
+}
+
+.deadline {
+    pointer-events: none;
+}
+
+.todoContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo {
+    display: flex;
+    height: 150px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoLink {
+    background-color: #2A3647;
+}
+
+.todoChildContainer {
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.todoIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    margin-right: 12px;
+}
+
+.todoIcon {
+    pointer-events: none;
+}
+
+.todoNumberText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.todoNumber {
+    font-size: 4rem;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.done {
+    display: flex;
+    height: 150px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.doneChildContainer {
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.doneIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    margin-right: 12px;
+}
+
+.doneNumberText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.doneNumber {
+    font-size: 4rem;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.userNameContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.greetingTime {
+    font-size: 2rem;
+}
+
+.nameOfUserGreeting {
+    font-size: 3rem;
+    color: rgba(41, 171, 226, 1);
+    font-weight: bold;
+}
+
+.userName {
+    color: #29ABE2;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.sum {
+    border: 10px;
+}
+
+.content-summary {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.doneIcon {
+    height: 70px;
+    width: 70px;
+}
+
+@media (max-width: 1028px) {
+
+    .main {
+        align-items: center;
+    }
+
+    .main-inner {
+        width: 80%;
+    }
+
+    .headline {
+        margin-left: 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        margin-left: 0px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+
+    .contentChild {
+        padding-bottom: 100px;
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .userNameContainer {
+        display: none;
+    }
+
+    .contentChild {
+        justify-content: center;
+    }
+
+    .containerOverview {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .tasks {
+        margin-bottom: 15px;
+    }
+
+    .urgentContainer {
+        margin-bottom: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .urgentChildContainer {
+        justify-content: center;
+    }
+
+    .todo {
+        height: 100px;
+    }
+
+    .done {
+        height: 100px;
+    }
+
+    .todoIcon {
+        height: 45px;
+        width: 45px;
+    }
+
+    .todoNumber {
+        font-size: 2rem;
+    }
+
+    .doneIcon {
+        height: 45px;
+        width: 45px;
+    }
+
+    .doneNumber {
+        font-size: 2rem;
+    }
+
+    .doneNumberText {
+        margin-left: 10px;
+    }
+
+    .todoNumberText {
+        margin-left: 10px;
+    }
+
+    .lineSummary {
+        border-style: groove;
+        border-right: none;
+        border-left: none;
+        border-bottom: groove;
+        border-bottom-color: rgb(39, 169, 224);
+        border-top: none;
+        height: 0px;
+        width: 100px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .taskFeedback {
+        height: 80px;
+        background-color: #FFFFFF;
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+    .taskFeedbackNumber {
+        font-weight: 600;
+        font-size: 2rem;
+        pointer-events: none;
+    }
+
+    .taskFeedbackText {
+        pointer-events: none;
+        text-align: center;
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .taskProgress {
+        height: 80px;
+        background-color: #FFFFFF;
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+    .taskProgressNumber {
+        font-weight: 600;
+        font-size: 2rem;
+        pointer-events: none;
+    }
+
+    .taskProgressText {
+        pointer-events: none;
+        text-align: center;
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .taskBoard {
+        height: 80px;
+        background-color: #FFFFFF;
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+    .taskBoardNumber {
+        font-weight: 600;
+        font-size: 2rem;
+        pointer-events: none;
+    }
+
+    .taskBoardText {
+        pointer-events: none;
+        text-align: center;
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .nutshell {
+        font-size: 1.5rem;
+    }
+
+    .urgentIconContainer img {
+        height: 42px;
+        width: 42px;
+    }
+
+    .urgentNumber {
+        font-size: 2rem;
+    }
+
+    .urgentText {
+        font-size: 14px;
+    }
+}
+
+
+@media (min-height: 820px) {
+    .main-inner {
+        width: 80%;
+    }
+}
+
+@media (max-width: 375px) {
+    .summary {
+        margin-top: -100px;
+    }
+    .headline {
+        height: 100px;
+    }
+
+    .nutshell {
+        font-size: 1.0rem;
+    }
+}
+
+@media (max-height: 812px) and (max-width: 375px) {
+    .main-inner {
+        margin-top: 80px;
+    }
+}
+
+

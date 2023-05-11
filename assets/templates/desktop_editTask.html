@@ -1,0 +1,72 @@
+<form id="popupAddTask" class="contPopupEditTask" onsubmit="editTask(); return false;">
+        <div class="popupEditTaskHeader">
+            <img src="././assets/img/cross.png" alt="" onclick="hideEditTask()" class="overlayEditClose">   
+        </div>
+        <div class="flexContainerEdit">
+            
+                <div class="inputBlock">
+                    <span class="inputTitle">Title</span>
+                    <input id="Edittitle" placeholder="Enter a title" onkeyup="addTitle()" required>
+                </div>
+
+                <div class="inputBlock">
+                    <span class="inputTitle">Description</span>
+                    <textarea id="Editdescription" class="add_task_textarea" placeholder="Enter a Description" onkeyup="addDescription()" required></textarea>
+                </div>
+
+                <div class="inputBlock"> 
+                <!-- Assigned To Start -->
+                <!-- <div class="inputBlock">
+                    <span class="inputTitle">Assigned to</span>
+                    <div class="selectField" id="selectFieldContactEdit" onclick="openCloseContactsEdit()">
+                        <div class="selectContact" id="selectContactEdit">
+                            <input id="contact"  placeholder="Select contacts to assign"/>
+                            <div id="imageContact">
+                                <img src="assets/img/dropdown_arrow.png" onclick="openCloseContactsEdit()"/>
+                            </div>
+                        </div>
+                        <div class="d-none" id="openedContacts" onclick="notOpenCloseContacts(event)">
+                        </div>
+                    </div>
+                        <div id="addedContacts"></div>
+                </div> -->
+            <!-- Assigned To End -->
+                <div class="line"></div>
+                <div class="inputBlock">
+                    <span class="inputTitle">Due date</span>
+                    <input type="date" required id="Editdate" onkeyup="addDate()">
+                </div> 
+                <div class="inputBlock">
+                    <span class="inputTitle">Prio</span>
+                    <div class="prio">
+                        <div id="urgentBtnEdit" class="prioBtn" onclick="choosePriorityEdit('Urgent')">
+                            Urgent
+                            <img src="assets/img/prio_Urgent1.png">
+                        </div>
+                        <div id="mediumBtnEdit" class="prioBtn" onclick="choosePriorityEdit('Medium')">
+                            Medium
+                            <img src="assets/img/prio_Medium1.png">
+                        </div>
+                        <div id="lowBtnEdit" class="prioBtn" onclick="choosePriorityEdit('Low')">
+                            Low
+                            <img src="assets/img/prio_Low1.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="inputBlock">
+                    <span class="inputTitle">Task Status</span>
+                    <select name="currentStatus" class="prioBtn" id="statusSelector">
+                        <option value="todo">Todo</option>
+                        <option value="progress">In Progress</option>
+                        <option value="feedback">Awaiting Feedback</option>
+                        <option value="done">Done</option>
+                    </select>
+                </div>
+                    <button class="saveBtn" id="saveBtn">
+                        Save                                 
+                    </button>
+        </div>
+        <div id="createTaskBtn" class="d-none">
+            <img id="image" src="assets/img/task_added_to_board.png" alt="Bild">
+        </div>
+</form>

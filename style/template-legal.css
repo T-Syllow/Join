@@ -1,0 +1,541 @@
+/*  contactPopUp css BEGINS here  */
+
+.contactPopUp-container {
+    position: fixed;
+    top: 25vh;
+    left: 7vw;
+    bottom: 0;
+    right: 0;
+    width: 85vw;
+    height: 500px;
+    display: flex;
+    color: white;
+    overflow: hidden;
+    border-style: none;
+    border-radius: 10px;
+    transition: 825ms ease-in-out;
+    z-index: 2;
+    opacity: 1;
+}
+
+.contactPopUp-join-container {
+    width: 30%;
+    background-color: rgba(9, 25, 49, 1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 125px;
+}
+
+.contactPopUp-join-container-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.contactPopUp-join-container-inner img {
+    width: 50px;
+    height: auto;
+}
+
+.contactPopUp-join-container-inner hr {
+    margin-left: 0px;
+    width: 25%;
+    border-color: rgba(41, 171, 226, 1);
+}
+
+.contactPopUp-form-container {
+    width: 70%;
+    background-color: rgb(241, 241, 241);
+    color: black;
+}
+
+.contactPopUp-form-headline {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contactPopUp-form-headline img {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.contactPopUp-form-headline img:hover {
+    cursor: pointer;
+}
+
+.contactPopUp-form-body {
+    width: 100%;
+    display: flex;
+}
+
+.contactPopUp-form-body-img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactPopUp-form-body-img-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 120px;
+    border-color: white;
+    box-shadow: 0px 0px 3px 2px rgb(226, 226, 226);
+    height: 166px;
+    width: 166px;
+    background-color: white;
+    margin-left: 77px;
+    margin-top: -80px;
+    color: black;
+}
+
+.contactPopUp-form-body-formular {
+    width: 60%;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.contactPopUp-form-body-formular form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contactPopUp-form-body-formular form div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contactPopUp-form-body-formular form input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 7px;
+    border-style: unset;
+    border-width: 0.5px;
+}
+
+.contactPopUp-form-body-formular form input:focus {
+    outline: none;
+}
+
+.submitButton {
+    background-color: rgba(9, 25, 49, 1);
+    color: white;
+    width: 50%;
+    transition: 525ms;
+}
+
+.submitButton:hover {
+    background-color: rgb(87, 220, 10);
+    color: white;
+    width: 50%;
+    cursor: pointer;
+}
+
+.cancelButton {
+    width: 30%;
+    margin-right: 20px;
+    transition: 525ms;
+}
+
+.cancelButton:hover {
+    background-color: rgba(9, 25, 49, 1);
+    width: 30%;
+    margin-right: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.hideAddContact {
+    transform: translateY(150vh);
+    z-index: -1;
+}
+
+.hideEditContact {
+    transform: translateY(-150vh);
+    z-index: -1;
+}
+
+@media(max-width: 1028px) {
+    .contactPopUp-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        color: white;
+        overflow: hidden;
+        border-style: none;
+        border-radius: 0px;
+        transition: 825ms ease-in-out;
+        z-index: 2;
+        opacity: 1;
+        flex-direction: column;
+    }
+
+    .contactPopUp-join-container {
+        width: 100%;
+        height: 30%;
+        padding-bottom: 75px;
+    }
+
+    .contactPopUp-join-container-inner img {
+        display: none;
+    }
+
+    .contactPopUp-form-container {
+        width: 100%;
+        height: 70%;
+    }
+
+    .contactPopUp-form-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactPopUp-form-body-img-picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 120px;
+        border-color: white;
+        box-shadow: 0px 0px 3px 2px rgb(226 226 226);
+        height: 120px;
+        width: 120px;
+        background-color: white;
+        margin-left: 0px !important;
+        margin-top: -100px !important;
+        color: black;
+    }
+
+    .cancelButton {
+        display: none;
+    }
+
+
+    .contactPopUp-form-body-formular form div {
+        justify-content: center;
+    }
+
+    .contactPopUp-form-body-formular form input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/*  contactPopUp css ENDS here  */
+
+/* addTaskPopUp css Starts here*/
+
+.addTaskPopUp-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 7vh;
+    left: 20vw;
+    bottom: 0;
+    right: 0;
+    width: 70vw;
+    height: 820px;
+    color: #2A3647;
+    border-style: none;
+    border-radius: 10px;
+    transition: 825ms ease-in-out;
+    z-index: 2;
+    opacity: 1;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    overflow-y: hidden;
+}
+
+.popupAddTaskHeader {
+    color: #2A3647;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popupAddTaskHeader img:hover {
+    cursor: pointer;
+}
+
+.popupAddTaskHeader div {
+    font-size: 32px;
+}
+
+.hideAddTask {
+    transform: translateY(-150vh);
+    z-index: -1;
+}
+
+
+@media(max-width: 1000px) {
+
+    .addTaskPopUp-container, .TaskCard, .EditTaskPopUp-container {
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        overflow: hidden;
+        border-style: none;
+        border-radius: 0px;
+        transition: 825ms ease-in-out;
+        z-index: 2;
+        opacity: 1;
+        flex-direction: column;
+    }
+
+    .overlayCategory {
+        font-size: 20px;
+    }
+
+    .overlayTitle h5 {
+        font-size: 35px;
+    }
+
+    .innerContentBoxOverlay b {
+        font-size: 15px;
+    }
+
+    .mainContainer {
+        overflow-y: auto;
+    }
+
+    .contPopupAddTask {
+        padding-bottom: 80px;
+    }
+
+    .buttons-createTask {
+        position: relative !important;
+        overflow: hidden !important;
+        height: 80px !important;
+    }
+
+    .flexContainer {
+        overflow-y: hidden !important;
+    }
+
+    .addTaskPopUp-container {
+        overflow-y: auto;
+    }
+}
+
+
+/* addTaskPopUp css ENDS here*/
+
+/*  topBar-template css BEGINS here  */
+
+
+.desktop-topBar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.desktop-topBar-container span {
+    padding-left: 160px;
+}
+
+.desktop-topBar-container .mainLogo {
+    height: 32px;
+    width: auto;
+    display: none;
+}
+
+.desktop-topBar-container div {
+    padding-right: 0px;
+}
+
+.desktop-topBar-content-container {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: rgba(191, 191, 191, 0.4) 4px 4px 4px;
+    z-index: 0;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.desktop-topBar-profilPicture {
+    height: 24px;
+    width: 24px;
+    border-radius: 30px;
+    padding: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.desktop-topBar-helpPicture {
+    height: 28px;
+    width: 28px;
+    border-radius: 30px;
+    margin-right: 15px;
+}
+
+.image-container-top-bar {
+    position: relative;
+    cursor: pointer;
+}
+
+.logout-text {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+@media(max-width: 1028px) {
+    .desktop-topBar-container span {
+        display: none;
+    }
+
+    .desktop-topBar-container .mainLogo {
+        display: block;
+    }
+
+    .desktop-topBar-helpPicture {
+        display: none;
+    }
+}
+
+/*  topBar-template css ENDS here  */
+
+/*  sideBar-template css BEGINS here  */
+
+.sidemenu-container-desktop {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(42, 54, 71, 1);
+}
+
+.sidemenu-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sidemenu-mainLogo-desktop {
+    margin-bottom: 100px;
+    margin-top: 40px;
+    align-self: center;
+}
+
+.sideMenu-link-container-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sideMenu-link-container-desktop:hover {
+    background-color: rgba(9, 25, 49, 1);
+    cursor: pointer;
+}
+
+.sideMenu-link-container-desktop a {
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+.legalLink-container {
+    margin-top: 100px;
+}
+
+.contactsLink {
+    margin-left: 38px !important;
+}
+
+.summaryLink {
+    margin-left: 35px !important;
+}
+
+.addTaskLink {
+    margin-left: 25px !important;
+}
+
+.boardLink {
+    margin-left: 30px !important;
+}
+
+.legalLink {
+    margin-left: 30px !important;
+}
+
+@media(max-width: 1028px) {
+
+    .sidemenu-container-desktop {
+        position: fixed;
+        bottom: 0px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 80px;
+        background-color: rgba(42, 54, 71, 1);
+        z-index: 10;
+    }
+
+    .sidemenu-mainLogo-desktop {
+        display: none;
+    }
+
+    .sideMenu-link-container-desktop {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .summaryLink,
+    .boardLink,
+    .addTaskLink,
+    .contactsLink {
+        margin-left: 0px !important;
+        margin-top: 5px;
+    }
+
+    .legalLink-container {
+        display: none;
+    }
+
+}
+
+/*  sideBar-template css ENDS here  */

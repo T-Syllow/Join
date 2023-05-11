@@ -1,0 +1,67 @@
+{
+    "allContacts": [
+        {
+            "prename": "Anton",
+            "name": "Mayer",
+            "short_name": "AM",
+            "email": "anton@gmail.com",
+            "password": "test123",
+            "phone": "+49 1111 111 131 1",
+            "favouriteColor": "rgba(255, 122, 0, 1)"
+        },
+        {
+            "prename": "Anja",
+            "name": "Schulz",
+            "short_name": "AS",
+            "email": "schulz@hotmail.com",
+            "password": "test123",
+            "phone": "+49 11122 111 11 1",
+            "favouriteColor": "rgba(147, 39, 255, 1)"
+        },
+        {
+            "prename": "Benedikt",
+            "name": "Ziegler",
+            "short_name": "BZ",
+            "email": "benedikt@gmail.com",
+            "password": "test123",
+            "phone": "+49 1111 111 11 1",
+            "favouriteColor": "rgba(41, 171, 226, 1)"
+        },
+        {
+            "prename": "David",
+            "name": "Eisenberg",
+            "short_name": "DE",
+            "email": "davidberg@gmail.com",
+            "password": "test123",
+            "phone": "+49 1112 311 11 1",
+            "favouriteColor": "rgba(252, 113, 255, 1)"
+        },
+        {
+            "prename": "Eva",
+            "name": "Fischer",
+            "short_name": "EF",
+            "email": "eva@gmail.com",
+            "password": "test123",
+            "phone": "+49 1199 1021 11 1",
+            "favouriteColor": "rgba(2, 207, 47, 1)"
+        },
+        {
+            "prename": "Emmanuel",
+            "name": "Mauer",
+            "short_name": "EM",
+            "email": "emmanuelMa@gmail.com",
+            "password": "test123",
+            "phone": "+49 116311 11 2",
+            "favouriteColor": "rgba(175, 22, 22, 1)"
+        },
+        {
+            "prename": "Marcel",
+            "name": "Bauer",
+            "short_name": "MB",
+            "email": "bauer@gmail.com",
+            "password": "test123",
+            "phone": "+49 1611 156 11 1",
+            "favouriteColor": "rgba(70, 47, 138, 1)"
+        }
+    ]
+}

@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+}
+
+/* CSS for Login Page */
+
+.join-logo {
+    position: absolute;
+    top: 80px;
+    left: 77px;
+    width: 100px;
+    height: auto;
+}
+
+.logo-animation {
+    animation: slideLogo 1s ease-in-out;
+    animation-direction: normal;
+    z-index: 5;
+}
+
+#preloader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    z-index: 9999999;
+}
+
+@keyframes slideLogo {
+    0% {
+        width: 272px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        width: 272px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        width: 100px;
+        top: 80px;
+        left: 77px;
+        height: auto;
+    }
+}
+
+
+.signup {
+    position: absolute;
+    top: 80px;
+    right: 70px;
+    height: auto;
+    display: flex;
+}
+
+.signup-p {
+    font-size: 25px;
+    padding-right: 35px;
+}
+
+.signup-button {
+    margin-top: 20px;
+    background-color: rgb(42, 54, 71);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 13px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    height: 55px;
+}
+
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.border-bottom {
+    margin-bottom: 27px;
+}
+
+.main-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    height: 457px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 8%);
+    border-radius: 30px;
+}
+
+.login-h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form input {
+    width: 350px;
+    height: 45px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    padding-left: 15px;
+    font-size: 21px;
+    padding-right: 55px;
+}
+
+.sign-up-main {
+    position: relative;
+}
+
+.forgot-password-l {
+    width: 800px !important;
+}
+
+.forgot-password-p {
+    font-size: 21px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.go-back {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.input-email {
+    background-image: url(../assets/img/email.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 18px);
+    margin-bottom: 35px;
+}
+
+.input-password {
+    background-image: url(../assets/img/password.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 18px);
+    margin-bottom: 35px;
+}
+
+.sign-up-password {
+    background-image: url(../assets/img/password.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 18px);
+}
+
+.input-name {
+    background-image: url(../assets/img/name.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 18px);
+    margin-bottom: 35px;
+}
+
+.remember-me-login {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me-input {
+    height: 16px !important;
+    width: 16px !important;
+    margin-bottom: 4px !important;
+    padding-top: 0 !important;
+}
+
+.forgot-my-password-login {
+    margin-left: 30px;
+}
+
+.login-form-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+}
+
+.signup-img {
+    object-fit: cover;
+    z-index: 0;
+}
+
+.login-button {
+    background-color: rgb(42, 54, 71);
+    border: none;
+    color: #fff;
+    padding: 13px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+}
+
+.sign-up-button {
+    background-color: rgb(42, 54, 71);
+    border: none;
+    color: #fff;
+    padding: 13px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(48, 178, 231);
+}
+
+.guest-submit-login {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 16px;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #FFFFFF;
+    border: 1px solid #647188;
+    border-radius: var(--border-radius);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* CSS for Login page ends */

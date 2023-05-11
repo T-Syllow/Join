@@ -1,0 +1,63 @@
+.sidemenu-container-mobile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 180px;
+    height: 100vh;
+    background-color: rgba(42, 54, 71, 1);
+}
+
+.sidemenu-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sidemenu-mainLogo-mobile {
+    margin-bottom: 100px;
+    margin-top: 40px;
+}
+
+.sidemenu-allLinks-container-mobile {
+    width: 100%;
+    overflow: hidden;
+}
+
+.sideMenu-link-container-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sideMenu-link-container-mobile:hover {
+    background-color: rgba(9, 25, 49, 1);
+}
+
+.sideMenu-link-container-mobile a {
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+} 
+
+.contactsLink {
+    margin-left: 38px !important;
+}
+
+.summaryLink {
+    margin-left: 35px !important;
+}
+
+.addTaskLink {
+    margin-left: 25px !important;
+}
+
+.boardLink {
+    margin-left: 30px !important;
+}
